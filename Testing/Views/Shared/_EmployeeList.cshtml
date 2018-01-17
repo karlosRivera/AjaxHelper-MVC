@@ -1,0 +1,37 @@
+﻿@model Testing.Models.Employee
+
+
+<div class="form-horizontal">
+    <div class="form-group">
+        @Html.LabelFor(model => model.Name, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.DisplayFor(model => model.Name, new { htmlAttributes = new { @class = "form-control" } })
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.City, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.DisplayFor(model => model.City, new { htmlAttributes = new { @class = "form-control" } })
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.Address, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.DisplayFor(model => model.Address, new { htmlAttributes = new { @class = "form-control" } })
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            @Ajax.ActionLink("Back", "PartialForm",
+                      new AjaxOptions
+                          {
+                              UpdateTargetId = "formsIndex", // <-- DOM element ID to update
+                              InsertionMode = InsertionMode.Replace, // <-- Replace the content of DOM element
+                              HttpMethod = "GET" // <-- HTTP method
+                          })
+        </div>
+    </div>
+</div>
