@@ -47,6 +47,22 @@ namespace Testing.Controllers
         {
             return View();
         }
+
+        public ActionResult DateCheck(DateTime? orderdate)
+        {
+            return View();
+        }
+
+        public ActionResult AjaxLinkTest()
+        {
+            ViewBag.Message = "Your application description page.";
+
+            if (Request.IsAjaxRequest())
+                return PartialView();
+
+            // use layout - just a link
+            return View();
+        }
     }
 
 }

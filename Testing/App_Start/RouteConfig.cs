@@ -14,6 +14,12 @@ namespace Testing
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
             routes.MapRoute(
+                name: "Datechack",
+                url: "home/datecheck/{orderdate}",
+                defaults: new { controller = "Home", action = "DateCheck", orderdate = UrlParameter.Optional }
+            );
+
+            routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
                 defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }

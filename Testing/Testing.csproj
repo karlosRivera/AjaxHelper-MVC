@@ -230,6 +230,8 @@
     <Content Include="Views\Shared\_EmployeeList.cshtml" />
     <Content Include="Views\Shared\_TestForm.cshtml" />
     <Content Include="Views\Home\BootStrap2ColumnForm.cshtml" />
+    <Content Include="Views\Home\DateCheck.cshtml" />
+    <Content Include="Views\Home\AjaxLinkTest.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

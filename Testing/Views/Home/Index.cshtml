@@ -11,9 +11,23 @@
 <div class="row">
     <div id="formsIndex">
         @Html.Partial("_TestForm");
+        <br />
+        <br />
+
+        @Html.ActionLink("Date route test", "DateCheck", new { orderdate = "12-25-2016" })
+        <br /><br />
+        @Ajax.ActionLink("Ajax.ActionLink Test", "AjaxLinkTest",
+                      new AjaxOptions
+                          {
+                              UpdateTargetId = "formsIndex", // <-- DOM element ID to update
+                              InsertionMode = InsertionMode.Replace, // <-- Replace the content of DOM element
+                              HttpMethod = "GET" // <-- HTTP method
+                          })
+
     </div>
 </div>
 
+
 @section scripts {
-       <script src="~/Scripts/jquery.unobtrusive-ajax.min.js"></script>
+    <script src="~/Scripts/jquery.unobtrusive-ajax.min.js"></script>
 }
